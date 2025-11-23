@@ -286,16 +286,25 @@ function botReply(userText) {
   const msg = userText.toLowerCase();
   let reply = "Saya tidak mengerti maksud Anda.";
 
-  if (msg.includes("halo") || msg.includes("hai") || msg.includes("assalam")) {
-    reply = "Halo juga! Ada yang bisa saya bantu?";
-  } else if (msg.includes("jam layanan")) {
-    reply = "Jam layanan KUA: Senin–Jumat, pukul 07.30–16.00 dan Jumat 07.30-16.30 WIB.";
-  } else if (msg.includes("nikah")) {
-    reply = "Untuk informasi pernikahan, silakan siapkan berkas N1,N4,N5 (apabila umur catin kurang dari 21 tahun),N6(apabila catin janda/duda cerai mati wajib melampirkan akta kematian suami/istri),akta cerai asli bagi catin janda/duda cerai hidup dan N7 (penolakan kehendak nikah apabila umur catin kurang dari 19 tahun).";
-  } else if (msg.includes("syarat")) {
-    reply = "Syarat nikah: N1,N4,N5,N6,N7,KTP, KK, Akta Kelahiran, SPTJM catin, pernyataan status dan pas foto (background biru ukuran 2x3=4 lembar).";
-  } else if (msg.includes("alamat")) {
-    reply = "Alamat KUA Prajekan: Jl. ...";
+  if (msg.includes("halo") || msg.includes("hai") || msg.includes("assalamu'alaikum")) {
+    reply = "wa'alaikumsalam ! Ada yang bisa saya bantu?";
+  } else if (msg.includes("mau tanya pak, jam layanan KUA prajekan sampek jam berapa ya ?")) {
+    reply = "Jam layanan KUA Prajekan: Senin–Jumat, pukul 07.30–16.00 dan Jumat 07.30-16.30 WIB.";
+  } else if (msg.includes("saya mau nikah pak, informasi untuk nikah ?")) {
+    reply = "Untuk informasi pernikahan, silakan siapkan berkas N1,N2,N4,N5 (apabila umur catin kurang dari 21 tahun),N6(apabila catin janda/duda cerai mati wajib melampirkan akta kematian suami/istri),akta cerai asli bagi catin janda/duda cerai hidup dan N7 (penolakan kehendak nikah apabila umur catin kurang dari 19 tahun).";
+  } else if (msg.includes("syarat syarat lain pak ?")) {
+    reply = "iya itu tadi mbak, Syarat nikah: N1,N4,N5,N6,N7,KTP, KK, Akta Kelahiran, SPTJM catin, pernyataan status dan pas foto (background biru ukuran 2x3=4 lembar).";
+  } else if (msg.includes("untuk biaya pak ?")) {
+    reply = "untuk biaya nikah di kantor gratis alias Rp. 0,- kalau biaya nikah manggil biayanya Rp. 600.000,- setor sendiri ke Bank terdekat mbak.";
+  }
+  } else if (msg.includes("kalo kawin di kantor harus bawa berkat ya pak ?")) {
+    reply = "nggak ada ketentuan bawa berkat mbak";
+  }
+  } else if (msg.includes("tapi kalau saya mau bawa berkat sebagai selabeten ato syukuran nggak papa ya pak ?")) {
+    reply = "nggak ada itu mbak, nggak usah bawa berkat mbak !";
+  }
+  } else if (msg.includes("biar pak saya tetep mau bawa pokoknya")) {
+    reply = "abbeeeh ... ";
   }
 
   addMessage(reply, "bot");
@@ -392,23 +401,32 @@ function botReply(text) {
   const msg = text.toLowerCase();
   let reply = "Maaf, saya kurang paham maksud Anda.";
 
-  if (msg.includes("halo") || msg.includes("assalam")) {
+  if (msg.includes("halo") || msg.includes("assalamu'alaikum")) {
     reply = "Wa’alaikumussalam! Ada yang bisa saya bantu?";
+  }
+  else if (msg.includes("mau tanya pak, jam layanan KUA prajekan sampek jam berapa ya ?")) {
+    reply = "Jam layanan KUA Prajekan: Senin–Jumat, pukul 07.30–16.00 dan Jumat 07.30-16.30 WIB.";
+  }
+  else if (msg.includes("saya mau nikah pak, informasi untuk nikah ?")) {
+    reply = "Untuk informasi pernikahan, silakan siapkan berkas N1,N2,N4,N5 (apabila umur catin kurang dari 21 tahun),N6(apabila catin janda/duda cerai mati wajib melampirkan akta kematian suami/istri),akta cerai asli bagi catin janda/duda cerai hidup dan N7 (penolakan kehendak nikah apabila umur catin kurang dari 19 tahun).";
   } 
-  else if (msg.includes("syarat nikah")) {
-    reply = "Syarat nikah: N1–N4, KTP, KK, Akta Lahir, dan pas foto.";
+  else if (msg.includes("syarat syarat lain pak ?")) {
+    reply = "iya itu tadi mbak, Syarat nikah: N1,N4,N5,N6,N7,KTP, KK, Akta Kelahiran, SPTJM catin, pernyataan status dan pas foto (background biru ukuran 2x3=4 lembar).";
   }
-  else if (msg.includes("biaya") || msg.includes("bayar")) {
-    reply = "Nikah di KUA GRATIS. Di luar KUA Rp 600.000 via bank.";
+  else if (msg.includes("untuk biaya pak ?") || msg.includes("bayar")) {
+    reply = "untuk biaya nikah di kantor gratis alias Rp. 0,- kalau biaya nikah manggil biayanya Rp. 600.000,- setor sendiri ke Bank terdekat mbak.";
   }
-  else if (msg.includes("lokasi") || msg.includes("alamat")) {
-    reply = "Alamat KUA Prajekan: Jl. ... (Google Maps).";
+  else if (msg.includes("kalo kawin di kantor harus bawa berkat ya pak ?") || msg.includes("alamat")) {
+    reply = "nggak ada ketentuan bawa berkat mbak";
   }
-  else if (msg.includes("jam layanan")) {
-    reply = "Jam layanan KUA: Senin–Jumat, 08.00–16.00 WIB.";
+  else if (msg.includes("tapi kalau saya mau bawa berkat sebagai selabeten ato syukuran nggak papa ya pak ?")) {
+    reply = "nggak ada itu mbak, nggak usah bawa berkat mbak !";
   }
-  else if (msg.includes("wa") || msg.includes("nomor")) {
-    reply = "Nomor WhatsApp admin: 0812-3456-7890.";
+  else if (msg.includes("biar pak saya tetep mau bawa pokoknya")) {
+    reply = "abbeeeh ... ";
+  }
+  else if (msg.includes("nomor wa nya berapa pak ?") || msg.includes("nomor")) {
+    reply = "Nomor WhatsApp admin: 085331479399.";
   }
 
   addBotMessage(reply);
