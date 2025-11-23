@@ -404,9 +404,6 @@ function botReply(text) {
   if (msg.includes("halo") || msg.includes("assalamu'alaikum")) {
     reply = "Wa’alaikumussalam! Ada yang bisa saya bantu?";
   }
-  else if (msg.includes("layanan KUA prajekan sampek jam berapa ?")) {
-    reply = "Jam layanan KUA Prajekan: Senin–Jumat, pukul 07.30–16.00 dan Jumat 07.30-16.30 WIB.";
-  }
   else if (msg.includes("saya mau nikah pak, informasi untuk nikah ?")) {
     reply = "Untuk informasi pernikahan, silakan siapkan berkas N1,N2,N4,N5 (apabila umur catin kurang dari 21 tahun),N6(apabila catin janda/duda cerai mati wajib melampirkan akta kematian suami/istri),akta cerai asli bagi catin janda/duda cerai hidup dan N7 (penolakan kehendak nikah apabila umur catin kurang dari 19 tahun).";
   } 
@@ -424,6 +421,9 @@ function botReply(text) {
   }
   else if (msg.includes("biar pak saya tetep mau bawa pokoknya")) {
     reply = "abbeeeh ... ";
+  }
+  else if (msg.includes("layanan KUA prajekan sampek jam berapa ?")) {
+    reply = "Jam layanan KUA Prajekan: Senin–Jumat, pukul 07.30–16.00 dan Jumat 07.30-16.30 WIB.";
   }
   else if (msg.includes("nomor wa nya berapa pak ?") || msg.includes("nomor")) {
     reply = "Nomor WhatsApp admin: 085331479399.";
