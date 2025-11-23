@@ -1,0 +1,515 @@
+/* Basic Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #222; background: #f4f6f8; }
+
+/* Top navigation */
+.topnav { display:flex; gap:12px; align-items:center; background:#ffffff; padding:10px 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); position:sticky; top:0; z-index:100; }
+.topnav a { color:#0b3d91; text-decoration:none; padding:8px 12px; border-radius:6px; }
+.topnav a:hover, .topnav a.active { background:#e9f0ff; }
+.topnav .brand { margin-right:8px; }
+.nav-logo { height:40px; }
+
+/* Header */
+.header-main { text-align:center; padding:22px 16px; background:linear-gradient(90deg,#f8fafc,#eef2ff); }
+.header-main h1 { font-size:20px; color:#0b3d91; }
+.alamat { color:#555; }
+
+/* Hero */
+.hero { position:relative; display:flex; align-items:center; justify-content:center; }
+.hero-img { width:100%; max-height:360px; object-fit:cover; display:block; }
+.hero-text { position:absolute; text-align:center; color:white; text-shadow:0 2px 8px rgba(0,0,0,0.6); }
+.hero-text h2 { font-size:36px; margin-bottom:8px; }
+.hero-text p { font-size:18px; }
+
+/* Container */
+.container { max-width:1100px; margin:24px auto; padding:0 16px; }
+
+/* Profil kepala */
+.profil-kepala { background:white; padding:18px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); margin-bottom:18px; }
+.profil-grid { display:flex; gap:16px; align-items:center; }
+.foto-kepala { width:180px; border-radius:8px; }
+
+/* Cards */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:12px; }
+.card { background:white; padding:12px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.04); text-align:center; }
+.card img { width:100%; height:140px; object-fit:cover; border-radius:6px; margin-bottom:8px; }
+.card a { display:inline-block; margin-top:8px; padding:8px 12px; background:#0b63a3; color:white; text-decoration:none; border-radius:6px; }
+
+/* Galeri */
+.galeri-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin-top:12px; }
+.galeri-grid img { width:100%; border-radius:6px; }
+
+/* Wilayah */
+.wilayah { background:white; padding:16px; border-radius:8px; margin-top:12px; }
+
+/* Button */
+.btn { display:inline-block; padding:10px 14px; background:#0b63a3; color:white; text-decoration:none; border-radius:8px; }
+
+/* Footer */
+.site-footer { text-align:center; padding:18px; margin-top:22px; color:#fff; background:#0b3d91; }
+
+/* Responsive */
+@media (max-width:700px){
+  .profil-grid { flex-direction:column; text-align:center; }
+  .hero-text h2 { font-size:24px; }
+  .hero-text p { font-size:14px; }
+}
+.deskripsi {
+  font-size: 14px;
+  color: #333;
+  font-style: italic;
+  margin: 6px 0 10px;
+}
+
+.galeri-grid figure {
+  text-align: center;
+}
+
+.galeri-grid figcaption {
+  font-size: 14px;
+  padding-top: 6px;
+  color: #333;
+  font-style: italic;
+}
+
+/* === RUNNING TEXT UNTUK p === */
+.running-text {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: block;
+  animation: runText 30s linear infinite;
+}
+
+@keyframes runText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.judul-selamat {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 26px; /* contoh ukuran lebih kecil */
+}
+
+.running-text {
+  color: #ff0000; /* merah */
+}
+
+/* === FAQ SECTION === */
+.faq-section {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faq-section h2 {
+  font-size: 20px; 
+  margin-bottom: 12px;
+  color: #0b3d91;
+  text-align: center;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: #eef4ff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  color: #0b3d91;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.faq-answer a {
+  color: #0b63a3;
+}
+
+/* FAQ open animation */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.chat-widget {
+  width: 280px;
+  height: 380px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 99999;
+}
+
+.chat-header {
+  background: #0d6efd;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+.bot-message, .user-message {
+  padding: 8px 12px;
+  margin: 6px 0;
+  border-radius: 12px;
+  max-width: 80%;
+  font-size: 14px;
+}
+
+.bot-message {
+  background: #e1eaff;
+  align-self: flex-start;
+}
+
+.user-message {
+  background: #d1ffd6;
+  align-self: flex-end;
+}
+
+.chat-input-box {
+  display: flex;
+  padding: 8px;
+  background: #eee;
+}
+
+.chat-input-box input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+}
+
+.chat-input-box button {
+  margin-left: 8px;
+  padding: 8px 12px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chat-floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #0d6efd;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 99999;
+}
+
+.chat-widget {
+  width: 300px;
+  height: 430px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999999;
+  animation: fadeIn .3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.chat-header {
+  background: #075E54;
+  color: white;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 2px solid #054C43;
+}
+
+.chat-header small {
+  margin-left: auto;
+  font-size: 11px;
+  opacity: .8;
+}
+
+.chat-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #ECE5DD;
+}
+
+.bot-message, .user-message {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: flex-end;
+}
+
+.bubble-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 14px;
+  font-size: 14px;
+}
+
+.bot-message .bubble {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.user-message .bubble {
+  background: #DCF8C6;
+}
+
+.chat-input-box {
+  display: flex;
+  padding: 8px;
+  background: #f0f0f0;
+}
+
+.chat-input-box input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+}
+
+.chat-input-box button {
+  margin-left: 8px;
+  padding: 8px 12px;
+  background: #075E54;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chat-floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #075E54;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 999999;
+}
+
+.chat-wa {
+  background: #25D366;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* === QR CODE POJOK KANAN HEADER === */
+.header-main {
+  position: relative;
+}
+
+/* Kontainer QR */
+.qr-kanan {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Ukuran QR */
+.qr-kanan img {
+  width: 80px;     /* Bisa diganti 60–120 sesuai selera */
+  height: auto;
+  border-radius: 10px; /* kalau mau tanpa sudut bulat, hapus saja */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  background: white;
+  padding: 4px;   /* supaya lebih rapi */
+}
+
+/* ===== Running Text di Bawah Hero ===== */
+.hero {
+  position: relative;
+}
+
+.running-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.55); /* warna hitam transparan */
+  padding: 6px 0;
+}
+
+.running-text {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 16px;
+  animation: runText 30s linear infinite;
+}
+
+.running-text img {
+  height: 20px;
+  vertical-align: middle;
+}
+
+/* Animasi berjalan */
+@keyframes runText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.deskripsi {
+  font-size: 14px;
+  color: #333;
+  font-style: italic;
+  margin: 6px 0 10px;
+  text-align: left;
+}
+
+.card p {
+  text-align: left;
+}
+
+figcaption {
+  text-align: left;
+}
+ .video-gallery {
+  padding: 20px;
+  text-align: center;
+}
+
+.video-gallery h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.video-card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.video-card {
+  margin-bottom: 25px;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.judul-video {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 8px;
+  line-height: 1.45;
+  text-align: justify;
+}
+
+.video-card h3 {
+  font-size: 13px;   /* makin kecil */
+  font-weight: 600;
+  margin-top: 6px;
+  line-height: 1.35;
+  text-align: justify;
+}
+
+
+
+
+
+
+
