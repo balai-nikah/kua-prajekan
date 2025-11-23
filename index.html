@@ -755,20 +755,20 @@ function getBotReply(text) {
 
     // SALAM
     if(/\b(halo|assalam|assalamu|wa'alaikum|waalaikum)\b/.test(text)){
-      return isMd ? 'Wa’alaikumussalam. Sapotah! Badeh, enten se tak bantu?' : 'Wa’alaikumussalam! Ada yang bisa saya bantu?';
+      return isMd ? 'Wa’alaikumussalam. Saporahnah! Badeh, enten se tak bentoh?' : 'Wa’alaikumussalam! Ada yang bisa saya bantu?';
     }
 
     // SYARAT NIKAH
     if(text.includes('syarat') && text.includes('nikah') || text.includes('persyaratan')){
       if(isMd){
-        return `Syarat nikah:\n• N1–N4 (surat administrasi)\n• KTP & KK (fotokopi)\n• Akta Kelahiran\n• Pasfoto 3x4 (2 lembar)\n\nButuh berkas terjemahan? Silakan hubungi admin.`;
+        return `Syarat nikah:\n• N1,N2,N4 (surat administrasi)\n• KTP & KK (fotokopi)\n• Akta Kelahiran\n• Pasfoto 3x4 (2 lembar)\n\nButuh berkas terjemahan? Silakan hubungi admin.`;
       } else {
         return `<strong>Syarat nikah di KUA Prajekan</strong><br>
 <ul style="margin:6px 0 6px 18px">
-<li>N1 – N4 (formulir administrasi)</li>
+<li>N1,N2 dan N4 (formulir administrasi)</li>
 <li>KTP & Kartu Keluarga (fotokopi & asli)</li>
 <li>Akta Kelahiran</li>
-<li>Pasfoto 3x4 (2 lembar)</li>
+<li>Pasfoto 2x3 (4 lembar)</li>
 </ul>
 Untuk bantuan pengisian, tekan tombol <em>Chat WA</em>.`;
       }
@@ -776,18 +776,18 @@ Untuk bantuan pengisian, tekan tombol <em>Chat WA</em>.`;
 
     // BIAYA
     if(text.includes('biaya') || text.includes('bayar') || text.includes('tarif')){
-      return isMd ? 'Biaya: Menika di KUA gratis. Jikah neng luar KUA, biasahnyah aya biaya administrasi.' : 'Biaya nikah: GRATIS di KUA (jam kerja). Untuk layanan luar kantor bisa ada biaya administrasi, silakan tanyakan via WA.';
+      return isMd ? 'Biaya: Menikah di KUA gratis. Mon neng luar KUA, biasahnyah bede biaya Rp. 600.000.' : 'Biaya nikah: GRATIS di KUA (jam kerja). Untuk layanan luar kantor bisa ada biaya Rp. 600.000, silakan tanyakan via WA.';
     }
 
     // JAM / LAYANAN
     if(text.includes('jam') || text.includes('layanan') || text.includes('jam layanan')){
-      return isMd ? 'Jam layanan: Senin–Jumat, 08.00–16.00 WIB.' : 'Jam layanan: Senin–Jumat, 08.00–16.00 WIB. Untuk layanan khusus hubungi admin.';
+      return isMd ? 'Jam layanan: Senin–Jumat, 07.30–16.00 WIB hari jum'at 07.30-16.30 WIB.' : 'Jam layanan: Senin–Jumat, 07.30–16.00 WIB hari jum'at 07.30-16.30 WIB, Untuk layanan khusus hubungi admin.';
     }
 
     // LOKASI
     if(text.includes('alamat') || text.includes('lokasi') || text.includes('maps')){
       // jika mau, bisa disetkan MAPS_LINK di konfigurasi
-      return isMd ? 'Alamat KUA Prajekan: Jl. ... (klik tombol Chat WA untuk minta link Maps).' : 'Alamat KUA Prajekan: Jl. ... (klik tombol Chat WA untuk meminta tautan Google Maps).';
+      return isMd ? 'Alamat KUA Prajekan: Jl. Walidono no.07 Prajekan Kidul (klik tombol Chat WA untuk minta link Maps).' : 'Alamat KUA Prajekan: Jl. Walidono no.07 Prajekan Kidul (klik tombol Chat WA untuk meminta tautan Google Maps).';
     }
 
     // SIMKAH / DAFTAR ONLINE
@@ -803,7 +803,7 @@ Untuk bantuan pengisian, tekan tombol <em>Chat WA</em>.`;
     // JAWABAN DEFAULT
     // suggestion helper in chosen language
     if(isMd){
-      return 'Maaf, tak paham. Cobak takon nganggo kata kunci: "Syarat nikah", "Biaya", "Jam layanan", atau tekan salah satu layanan cepat di bawah.';
+      return 'Maaf, tak paham. Cobak tanyah nganggui kata kunceh: "Syarat nikah", "Biaya", "Jam layanan", atau tekan salah satu layanan cepat di bawah.';
     } else {
       return 'Maaf, saya belum mengerti. Coba kata kunci: "Syarat nikah", "Biaya", "Jam layanan", atau pilih layanan cepat di bawah.';
     }
@@ -820,7 +820,7 @@ Untuk bantuan pengisian, tekan tombol <em>Chat WA</em>.`;
 
   /****************** HELPERS ******************/
   function getGreeting(){
-    return LANG === 'md' ? 'Assalamualaikum — selamet datang! Kula siap bantu.' : 'Assalamu\'alaikum — Selamat datang! Saya siap membantu.';
+    return LANG === 'md' ? 'Assalamualaikum — selamet dateng! Kuleh siap a bentoh.' : 'Assalamu\'alaikum — Selamat datang! Saya siap membantu.';
   }
 
   function toggleLanguage(){
@@ -828,7 +828,7 @@ Untuk bantuan pengisian, tekan tombol <em>Chat WA</em>.`;
     applyLangButton();
     localStorage.setItem('kua_lang', LANG);
     // show small notice in chat
-    showBotMessage(LANG==='md' ? 'Bahasa digenti ke Madura.' : 'Bahasa berubah ke Bahasa Indonesia.');
+    showBotMessage(LANG==='md' ? 'Bahasa e genteh ke Madure.' : 'Bahasa berubah ke Bahasa Indonesia.');
   }
 
   /****************** START ******************/
