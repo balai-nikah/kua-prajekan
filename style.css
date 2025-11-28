@@ -674,7 +674,7 @@ figcaption {
 }
 
 .bt-judul {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   margin-bottom: 4px;
   color: #222;
@@ -688,13 +688,6 @@ figcaption {
 .bt-tanggal {
   font-size: 13px;
   color: #555;
-}
-
-.bt-judul {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: #222;
 }
 
 
