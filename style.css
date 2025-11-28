@@ -690,4 +690,23 @@ figcaption {
   color: #555;
 }
 
+.readmore-box {
+  max-height: 120px;      /* Tinggi teks sebelum dipotong */
+  overflow: hidden;
+  position: relative;
+}
+
+.readmore-box.expanded {
+  max-height: none;
+}
+
+.readmore-btn {
+  display: inline-block;
+  margin-top: 6px;
+  color: #0b3d91;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
 
