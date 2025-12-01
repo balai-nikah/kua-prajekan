@@ -564,5 +564,16 @@ function toggleReadMore(btn) {
     : "Baca selengkapnya";
 }
 </script>
+  <script>
+function toggleReadMoreGaleri(btn) {
+  const box = btn.previousElementSibling;
+  box.classList.toggle("expanded");
+
+  btn.textContent = box.classList.contains("expanded")
+    ? "Sembunyikan"
+    : "Baca selengkapnya";
+}
+</script>
+
 </body>
 </html>
