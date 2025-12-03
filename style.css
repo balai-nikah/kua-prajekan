@@ -12,8 +12,6 @@ body { font-family: Arial, sans-serif; line-height: 1.6; color: #222; background
   perspective: 1000px; /* wajib supaya efek 3D muncul */
   display: inline-block;
 }
-
-/* Animasi rotasi depan ↔ belakang */
 @keyframes rotateFrontBack {
   0%   { transform: rotateY(0deg); }
   50%  { transform: rotateY(180deg); }
